@@ -8,7 +8,7 @@ function App() {
         @import
         url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
       </style>
-      <div className="logo-type">Sepsig</div>
+      <div className="logo-type">SEPSIG</div>
       <div>
         <h1>Vital Input Page</h1>
         <h2>Input Data</h2>
