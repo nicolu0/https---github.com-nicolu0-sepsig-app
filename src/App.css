@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 1em;
+}
+
+.input-box {
+  padding: 6px;
+}
+
+.logo-type {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Prompt', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  height: 40px;
+  left: 26px;
+  letter-spacing: -0.36px;
+  line-height: 40px;
+  position: absolute;
+  top: 21px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.87);
+}
+

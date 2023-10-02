@@ -1,0 +1,1 @@
+export { IconBarGraph } from "./BarGraph";
