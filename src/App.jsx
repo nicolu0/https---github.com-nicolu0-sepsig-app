@@ -5,7 +5,7 @@ import { VitalInput } from "./pages";
 function App() {
   return (
     <>
-      <VitalInput></VitalInput>
+      <VitalInput />
     </>
   );
 }
