@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-export const IconBarGraph = ({ color = "white", className }) => {
+export const BarGraphIcon = ({ color = "white", className }) => {
   return (
     <svg
       className={`icon-bar-graph ${className}`}
@@ -18,7 +18,13 @@ export const IconBarGraph = ({ color = "white", className }) => {
         fill={color}
         fillRule="evenodd"
       />
-      <path className="path" clipRule="evenodd" d="M3 8H8V22H3V8ZM5 10V20H6V10H5Z" fill={color} fillRule="evenodd" />
+      <path
+        className="path"
+        clipRule="evenodd"
+        d="M3 8H8V22H3V8ZM5 10V20H6V10H5Z"
+        fill={color}
+        fillRule="evenodd"
+      />
       <path
         className="path"
         clipRule="evenodd"
@@ -30,6 +36,6 @@ export const IconBarGraph = ({ color = "white", className }) => {
   );
 };
 
-IconBarGraph.propTypes = {
+BarGraphIcon.propTypes = {
   color: PropTypes.string,
 };

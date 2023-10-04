@@ -1,0 +1,1 @@
+export { default as VitalInput } from './VitalInput/VitalInput'
