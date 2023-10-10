@@ -39,8 +39,12 @@ function VitalInput() {
         </div>
       </div>
       <div className="card">
-        <button>ADD PATIENT</button>
-        <button>UPDATE DATA</button>
+        <button className="add-patient" onClick={() => null}>
+          ADD PATIENT
+        </button>
+        <button className="update-data" onClick={() => null}>
+          UPDATE DATA
+        </button>
       </div>
       <BarGraphIcon className="icon-bar-graph" color="white" />
       <UserIcon className="icon-user" color="white" />
