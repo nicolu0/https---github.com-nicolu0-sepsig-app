@@ -1,53 +1,67 @@
 import { useState } from "react";
 import "./VitalInput.css";
-import { BarGraphIcon, UserIcon } from "../../icons";
+import { BarGraphIcon, SettingsIcon, UserIcon } from "../../icons/";
+import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUser, faGear, faChartLine } from "@fortawesome/free-solid-svg-icons";
+
+function Logo() {
+  return (
+    <Link to="/" className="logo-type">
+      Sepsig
+    </Link>
+  );
+}
+
+function Header() {
+  return (
+    <div>
+      <h1>Input your vitals:</h1>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <div className="footer">© 2023 Sepsig. All rights reserved.</div>
+    </footer>
+  );
+}
+
+function InputBox(props) {
+  return (
+    <div className="input-box">
+      <label for={props.name}>{props.name}: </label>
+      <input type="number" id={props.id} />
+    </div>
+  );
+}
 
 function VitalInput() {
   return (
     <>
-      <div className="logo-type">Sepsig</div>
+      <Logo />
+      <Header />
       <div>
-        <h1>Vital Input Page</h1>
-        <h2>Input Data</h2>
-      </div>
-      <div>
-        <div className="input-box">
-          <label for="Patient ID">Patient ID: </label>
-          <input type="number" id="patientID" />
-        </div>
-        <div className="input-box">
-          <label for="heart rate">Heart Rate: </label>
-          <input type="number" id="heartRate" />
-        </div>
-        <div className="input-box">
-          <label for="respitory rate">Respitory Rate: </label>
-          <input type="number" id="respiratoryRate" />
-        </div>
-        <div className="input-box">
-          <label for="body temperature">Body Temperature: </label>
-          <input type="number" id="bodyTemperature" />
-        </div>
-        <div className="input-box">
-          <label for="systolic blood pressure">Systolic Blood Pressure: </label>
-          <input type="number" id="sysBloodPressure" />
-        </div>
-        <div className="input-box">
-          <label for="diastolic blood pressure">
-            Diastolic Blood Pressure:{" "}
-          </label>
-          <input type="number" id="diaBloodPressure" />
-        </div>
+        <InputBox name="Heart Rate" id="heartRate" />
+        <InputBox name="Respitory Rate" id="respiratoryRate" />
+        <InputBox name="Body Temperature" id="bodyTemperature" />
+        <InputBox name="Systolic Blood Pressure" id="sysBloodPressure" />
+        <InputBox name="Diastolic Blood Pressure" id="diaBloodPressure" />
       </div>
       <div className="card">
-        <button className="add-patient" onClick={() => null}>
-          ADD PATIENT
-        </button>
         <button className="update-data" onClick={() => null}>
           UPDATE DATA
         </button>
       </div>
-      <BarGraphIcon className="icon-bar-graph" color="white" />
-      <UserIcon className="icon-user" color="white" />
+      <Link to="/visualize">
+        <BarGraphIcon className="icon-bar-graph" />
+      </Link>
+      <SettingsIcon className="icon-settings" />
+      <UserIcon className="icon-user" />
+      {/* <FontAwesomeIcon className="icon-user" icon={faUser} /> */}
+      <Footer />
     </>
   );
 }
